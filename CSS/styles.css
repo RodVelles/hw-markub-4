@@ -21,16 +21,22 @@
 */
 
 /* Утиліти */
-html {
-	box-sizing: border-box;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
 }
 
-*,
-*::before,
-*::after {
-	box-sizing: inherit;
-	padding: 0;
-	margin: 0;
+button {
+	cursor: pointer;
+}
+
+img {
+	display: block;
 }
 
 :root {
@@ -54,6 +60,7 @@ ul {
 }
 
 .list {
+	list-style: none;
 	margin: 0;
 	padding: 0;
 }
@@ -71,9 +78,16 @@ ul {
 	width: 1200px;
 	padding-right: 15px;
 	padding-left: 15px;
+	outline: 1px solid red;
 }
 
 /* Позиціювання шапки */
+
+.main-nav {
+	display: flex;
+	align-items: center;
+}
+
 .nav {
 	display: flex;
 }
@@ -94,11 +108,6 @@ ul {
 	line-height: 1.19;
 }
 
-.main-nav {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-}
 
 /* Сайт зараз */
 
