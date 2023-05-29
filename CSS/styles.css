@@ -20,24 +20,7 @@
 
 */
 
-/* Утиліти */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-	margin: 0;
-}
-
-button {
-	cursor: pointer;
-}
-
-img {
-	display: block;
-}
+/* --------------- Утиліти ---------------  */
 
 :root {
 	--primary-text-color: #757575;
@@ -45,7 +28,6 @@ img {
 	--accent-color: #2196f3;
 	--primary-btn-bgc: #f5f4fa;
 	--accent-btn-color: #ffffff;
-	--primary-icon-color: #AFB1B8;
 }
 
 body {
@@ -60,16 +42,8 @@ ul {
 }
 
 .list {
-	list-style: none;
 	margin: 0;
 	padding: 0;
-}
-
-/* Оформлення шапки */
-.header {
-	padding-top: 25px;
-	padding-bottom: 25px;
-	border-bottom: 1px solid #ececec;
 }
 
 .container {
@@ -78,19 +52,22 @@ ul {
 	width: 1200px;
 	padding-right: 15px;
 	padding-left: 15px;
-	outline: 1px solid red;
+	outline: 2px solid red;
 }
 
-/* Позиціювання шапки */
+/* --------------- Оформлення шапки ---------------  */
 
-.main-nav {
-	display: flex;
-	align-items: center;
+.header {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	border-bottom: 1px solid #ececec;
 }
 
 .nav {
 	display: flex;
 }
+
+/* --------------- Логотип сайту ---------------  */
 
 .logo {
 	color: #000000;
@@ -107,16 +84,19 @@ ul {
 	font-size: 26px;
 	line-height: 1.19;
 }
+.main-nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
 
-
-/* Сайт зараз */
+/* --------------- Сайт зараз ---------------  */
 
 .site-nav {
 	display: flex;
 	align-items: center;
 	margin-left: 93px;
 }
-
 .site-nav .item:not(:last-child) {
 	margin-right: 50px;
 }
@@ -143,26 +123,21 @@ ul {
 	color: var(--accent-color);
 }
 
-/* ПОшта з телефоном */
-.more.list {
+/* --------------- Контактні дані ---------------  */
+
+.more {
 	margin-left: auto;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 }
 
 .more .item:not(:last-child) {
 	margin-right: 50px;
 }
 
-.icon-nav {
-	margin-right: 10px;
-}
-
 .more .more-link {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	display: block;
+	padding-top: 8px;
+	padding-bottom: 8px;
 
 	color: #757575;
 	font-weight: 500;
@@ -175,23 +150,14 @@ ul {
 .more .more-link:hover,
 .more .more-link:focus {
 	color: #2196f3;
-	fill: var(--accent-color);
 }
 
-/* Герой */
+/* --------------- Герой ---------------  */
+
 .hero {
 	padding-top: 200px;
 	padding-bottom: 200px;
-	height: 600px;
-	max-width: 1600px;
-	margin-left: auto;
-	margin-right: auto;
-
-	background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
-
+	margin: 0;
 	background-color: #2f303a;
 }
 
@@ -220,7 +186,7 @@ ul {
 	margin-right: auto;
 	margin-left: auto;
 
-	font-family: inherit;
+	font-family: Roboto;
 	color: #ffffff;
 	background-color: #2196f3;
 	font-weight: 700;
@@ -232,7 +198,8 @@ ul {
 	letter-spacing: 0.06em;
 }
 
-/* Переваги помлуг */
+/* --------------- Переваги помлуг ---------------  */
+
 .section {
 	padding-top: 94px;
 	padding-bottom: 94px;
@@ -249,46 +216,6 @@ ul {
 	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
 	overflow: hidden;
-}
-
-.item-box::before {
-	display: block;
-	content: "";
-	height: 120px;
-    background-size: auto;
-	background-repeat: no-repeat;
-	background-position: center; 
-	background: #F5F4FA;
-    border-radius: 4px;
-	margin-bottom: 30px;
-}
-
-.icon-antenna::before{
-	background-image: url(../images/SVG/antenna.svg);
-    background-size: auto;
-	background-repeat: no-repeat;
-	background-position: center; 
-}
-
-.icon-clock::before {
-	background-image: url(../images/SVG/clock.svg);
-    background-size: auto;
-	background-repeat: no-repeat;
-	background-position: center; 
-}
-
-.icon-diagram::before {
-	background-image: url(../images/SVG/diagram.svg);
-    background-size: auto;
-	background-repeat: no-repeat;
-	background-position: center; 
-}
-
-.icon-astronaut::before {
-	background-image: url(../images/SVG/astronaut.svg);
-    background-size: auto;
-	background-repeat: no-repeat;
-	background-position: center; 
 }
 
 .list-items {
@@ -333,28 +260,18 @@ ul {
 	line-height: 1.71;
 }
 
-/* Розгляд послуг */
+/* --------------- Розгляд послуг ---------------  */
+
 .section.sidebar {
 	padding-top: 0;
-}
-
-/* Члени команди */
-.section.section-team {
-	background: #F5F4FA;
-}
-
-.team-box {
-	width: 270px;
-	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
-
-	background-color: #ffffff;
 }
 
 .text-container {
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
+
+/* --------------- Члени команди ---------------  */
 
 .section .section-name {
 	margin-bottom: 10px;
@@ -367,7 +284,7 @@ ul {
 
 .section .profession {
 	margin-top: 0;
-	margin-bottom: 16px;
+	margin-bottom: 0;
 
 	color: #757575;
 	font-weight: 400;
@@ -376,45 +293,8 @@ ul {
 	text-align: center;
 }
 
-.network {
-	text-decoration: none;
-	display: inline-block;
-}
+/* --------------- Футер ---------------  */
 
-.inst {
-	width: 44px;
-	height: 44px;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	fill: var(--primary-icon-color);
-}
-
-.network:not(:last-child){
-	margin-right: 10px;
-}
-.net {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.inst:focus,
-.inst:hover {
-	fill: var(--accent-btn-color);
-	background-color: var(--accent-color);
-}
-
-/* База клієнтів */
-.section-client {
-	padding-top: 94px;
-	padding-bottom: 94px;
-
-	background-color: #ffffff;
-}
-
-/* Футер */
 .footer {
 	background-color: #2f303a;
 	padding-top: 60px;
@@ -460,7 +340,8 @@ ul {
 	color: var(--accent-color);
 }
 
-/* Портфоліо */
+/* --------------- Портфоліо ---------------  */
+
 .visually-hidden {
 	position: absolute;
 	width: 1px;
@@ -474,7 +355,7 @@ ul {
 	overflow: hidden;
 }
 
-/* Фільтир */
+/* --------------- Фільтир ---------------  */
 
 .buttons {
 	display: flex;
@@ -492,7 +373,7 @@ ul {
 	padding: 6px 22px;
 	border: none;
 
-	font-family: inherit;
+	font-family: Roboto;
 	color: var(--title-color);
 	background-color: var(--primary-btn-bgc);
 	font-weight: 500;
@@ -508,7 +389,8 @@ ul {
 	background-color: var(--accent-color);
 }
 
-/* Список проектів */
+/* --------------- Список проектів ---------------  */
+
 .items {
 	display: flex;
 	flex-wrap: wrap;
