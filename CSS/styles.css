@@ -30,20 +30,55 @@
 	--accent-btn-color: #ffffff;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+button {
+	cursor: pointer;
+}
+
+img {
+	display: block;
+}
+
+.list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.link {
+	text-decoration: none;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+
+/* --------------- Контент сторінки ---------------  */
+
 body {
 	background-color: #ffffff;
 	color: var(--title-color);
 	font-family: Roboto, sans-serif;
 	letter-spacing: 0.03em;
-}
-
-ul {
-	list-style: none;
-}
-
-.list {
-	margin: 0;
-	padding: 0;
 }
 
 .container {
@@ -53,6 +88,11 @@ ul {
 	padding-right: 15px;
 	padding-left: 15px;
 	outline: 2px solid red;
+}
+
+.section {
+	padding-top: 94px;
+	padding-bottom: 94px;
 }
 
 /* --------------- Оформлення шапки ---------------  */
@@ -78,7 +118,7 @@ ul {
 	text-decoration: none;
 }
 
-.caption {
+.logo-caption {
 	color: #2196f3;
 	font-weight: 700;
 	font-size: 26px;
@@ -97,11 +137,11 @@ ul {
 	align-items: center;
 	margin-left: 93px;
 }
-.site-nav .item:not(:last-child) {
+.site-nav-item:not(:last-child) {
 	margin-right: 50px;
 }
 
-.site-nav .link {
+.site-nav-link  {
 	display: block;
 	padding-top: 8px;
 	padding-bottom: 8px;
@@ -114,27 +154,27 @@ ul {
 	text-decoration: none;
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.site-nav-link:hover,
+.site-nav-link:focus {
 	color: var(--accent-color);
 }
 
-.site-nav .link.corrent {
+.site-nav-link.corrent {
 	color: var(--accent-color);
 }
 
 /* --------------- Контактні дані ---------------  */
 
-.more {
+.kontakt {
 	margin-left: auto;
 	display: flex;
 }
 
-.more .item:not(:last-child) {
+.kontakt-item:not(:last-child) {
 	margin-right: 50px;
 }
 
-.more .more-link {
+.kontakt-link {
 	display: block;
 	padding-top: 8px;
 	padding-bottom: 8px;
@@ -147,8 +187,8 @@ ul {
 	text-decoration: none;
 }
 
-.more .more-link:hover,
-.more .more-link:focus {
+.kontakt-link:hover,
+.kontakt-link:focus {
 	color: #2196f3;
 }
 
@@ -163,8 +203,6 @@ ul {
 
 .hero .hero-title {
 	max-width: 700px;
-	margin: 0;
-	padding: 0;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 30px;
@@ -185,6 +223,9 @@ ul {
 	border: none;
 	margin-right: auto;
 	margin-left: auto;
+	display: block;
+	align-items: center;
+	text-align: center;
 
 	font-family: Roboto;
 	color: #ffffff;
@@ -192,55 +233,27 @@ ul {
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 1.88;
-	display: flex;
-	align-items: center;
-	text-align: center;
 	letter-spacing: 0.06em;
+}
+
+.button:hover,
+.button:focus {
+	background: #188CE8;
 }
 
 /* --------------- Переваги помлуг ---------------  */
 
-.section {
-	padding-top: 94px;
-	padding-bottom: 94px;
-}
-
-.section .hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	white-space: nowrap;
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
-	overflow: hidden;
-}
-
-.list-items {
+.advantages-items {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	margin: 0;
-	padding: 0;
 }
 
-.item-box {
+.advantages-box {
 	width: 270px;
 }
 
-.section .section-title {
-	margin-top: 0;
-	margin-bottom: 50px;
-
-	font-weight: 700;
-	font-size: 36px;
-	line-height: 1.17;
-	text-align: center;
-}
-
-.section .section-subtitle {
+.advantages-subtitle {
 	margin: 0;
 	margin-bottom: 10px;
 
@@ -250,10 +263,7 @@ ul {
 	text-transform: uppercase;
 }
 
-.section .section-text {
-	margin-top: 0;
-	margin-bottom: 0;
-
+.advantages-text {
 	color: var(--primary-text-color);
 	font-weight: 400;
 	font-size: 14px;
@@ -262,18 +272,41 @@ ul {
 
 /* --------------- Розгляд послуг ---------------  */
 
-.section.sidebar {
-	padding-top: 0;
+.section-title {
+	margin-bottom: 50px;
+
+	font-weight: 700;
+	font-size: 36px;
+	line-height: 1.17;
+	text-align: center;
 }
 
-.text-container {
-	padding-top: 30px;
-	padding-bottom: 30px;
+.service-list {
+	display: flex;
+}
+
+.service-item {
+	margin-right: 30px;
+}
+
+.service-item:last-child {
+	margin-right: 0;
 }
 
 /* --------------- Члени команди ---------------  */
 
-.section .section-name {
+.team-list {
+	display: flex;
+	justify-content: center;
+	gap: 30px;
+}
+
+.team-container {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.team-name {
 	margin-bottom: 10px;
 
 	font-weight: 500;
@@ -282,10 +315,7 @@ ul {
 	text-align: center;
 }
 
-.section .profession {
-	margin-top: 0;
-	margin-bottom: 0;
-
+.team-text {
 	color: #757575;
 	font-weight: 400;
 	font-size: 16px;
@@ -340,35 +370,23 @@ ul {
 	color: var(--accent-color);
 }
 
+
 /* --------------- Портфоліо ---------------  */
 
-.visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	white-space: nowrap;
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
-	overflow: hidden;
-}
 
 /* --------------- Фільтир ---------------  */
 
-.buttons {
+.buttons-gallery {
 	display: flex;
 	justify-content: center;
-	margin-top: 0;
 	margin-bottom: 50px;
 }
 
-.buttons .btn-item:not(:last-child) {
+.btn-gallery:not(:last-child) {
 	margin-right: 8px;
 }
 
-.buttons .btn {
+.btn {
 	border-radius: 4px;
 	padding: 6px 22px;
 	border: none;
@@ -383,25 +401,25 @@ ul {
 	letter-spacing: 0.03em;
 }
 
-.buttons .btn:hover,
-.buttons .btn:focus {
+.btn:hover,
+.btn:focus {
 	color: var(--accent-btn-color);
 	background-color: var(--accent-color);
 }
 
 /* --------------- Список проектів ---------------  */
 
-.items {
+.gallery-list {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 
-.items .item-features:not(:nth-child(n + 7)) {
+.item-gallery:not(:nth-child(n + 7)) {
 	margin-bottom: 30px;
 }
 
-.items .item-features:not(:nth-child(3n)) {
+.item-gallery:not(:nth-child(3n)) {
 	margin-right: 30px;
 }
 
